@@ -1,5 +1,7 @@
 package com.itb.tcc.inf2am.myproject.model;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +25,7 @@ public class Usuario {
 	private String bairro;
 	private String cidade;
 	private String uf;
+	private LocalDateTime dataNascimento;
 	
 	private boolean codStatusUsuario;
 
@@ -114,7 +117,16 @@ public class Usuario {
 		this.uf = uf;
 	}
 
-	public boolean isCodStatusUsuario() {
+	
+	public LocalDateTime getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(LocalDateTime dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public boolean getCodStatusUsuario() {
 		return codStatusUsuario;
 	}
 
